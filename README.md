@@ -65,3 +65,9 @@ Figure 3. Summary statistics of Suspension Coil data.
 
 
 ## Study Design: MechaCar vs Competition
+
+Use availabe dataset to perform multiple linear regression to identify factors affecting the car mpg
+Perform correlation (Spearman) analysis to identify factors to consider
+Determine the final 
+
+
