@@ -88,6 +88,8 @@ We have seen in our current analysis that vehicle length, ground clearance, and 
 
 A statistical study design is proposed to predict vehicle performance (by fuel efficiency, MPG) and to evaluate performance between MechaCar and competitor vehicles includes the following.
 
+Note: In this description, I use the term "vehicle parameters" for the vehicle measurements that are used for evaluations by companies.
+
 - Linear Modeling of vehicle parameters to identify vehicle parameters that affect fuel efficiency (including MechaCar vehicles and vehicles of Other Competitors).
   - This can be performed by using publicly available large data set with as many numerical vehicle parameters ((including MPG) as possible for linear         modeling.
   - Correlation analysis priot to linear modeling will help identifying the vehicle parameters that highly correlate with fuel effiency (MPG) 
@@ -120,9 +122,9 @@ Null Hypothesis: The means of all groups are equal. i.e., fuel efficiency (MPG) 
 - Alternative hypothesis: At least one of the means is different from all other groups.i.e., Mean fuel efficiency (MPG) is statistically significantly different at least in vehicle group (MechaCar and competitor vehicles) 
 
 *What statistical test would you use to test the hypothesis? And why?*
-- Perform correlation analysis using as many numerical parameters available in a publicly available dataset 
+- Perform correlation analysis using as many numerical vehicle parameters available in a publicly available datase wyth vehicle parameters on fuel efficiency.
   - This will help identifying correlating variables with fuel effiency (MPG) to narrow down the list of variables for multiple linear modeling. 
-  - It will also narrow down the list of independent variables for using in multiple linear modeling
+  - It will also narrow down the number of independent variables for using in multiple linear modeling
   
 - Perform multiple linear regression analysis using highly correlated variables (vehicle parameters) in the correlation analysis to determine parameters that predict fuel effiency (MPG).
   - This will enable identifying variables (measured vehicle parameters) that predict fuel efficiency (MPG). 
