@@ -125,7 +125,7 @@ Null Hypothesis: The means of all groups are equal. i.e., fuel efficiency (MPG) 
   
 - Perform multiple linear regression analysis using highly correlated variables (vehicle parameters) in the correlation analysis to determine parameters that predict fuel effiency (MPG).
   - This will enable identifying variables (measured vehicle parameters) that predict fuel efficiency (MPG). 
-  - 
+ 
 - Perform One-Way Analysis of Varience (ONE-WAY ANOVA) MechCar and competitor vehicles for fuel efficiency.
   - Independant variables are vehicle groups.
   - Dependent variable is fuel efficiency.
