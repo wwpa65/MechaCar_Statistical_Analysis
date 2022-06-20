@@ -1,7 +1,7 @@
 # MechaCar_Statistical_Analysis
 
 # Overview
-A statistal analysis was performed on MechaCar vehicle data. 
+A statistal analysis was performed on MechaCar vehicle data. Multiple linear model was performed on the MechaCar dataset and t-tests were performed on Suspension coil dataset. The goal of the multiple linear model was to identify factors that influence fuel efficiency. The t-tests were used to identify differences of suspension coils between vehicle lot numbers. 
 
 # Summary
 
