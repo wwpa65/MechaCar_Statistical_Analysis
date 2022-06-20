@@ -67,7 +67,6 @@ Figure 3. Summary statistics of Suspension Coil data.
 ## Study Design: MechaCar vs Competition
 
 
-
 *Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 
 In your description, address the following questions:
@@ -79,8 +78,6 @@ What data is needed to run the statistical test?*
 What metric or metrics are you going to test?
 - Fuel efficiency: City miles per gallon (MPG), highway MPG
 - number of forward gears, horsepower, torque, vehicle width, vehicle length, vehicle height, vehicle weight, spoiler angle, ground clearance
-- Perform multiple linear regression analysis to determine parameters that correlate with fuel effiency
-- Perform Analysis of Varience (ONE-WAY ANOVA/ TWO-WAY ANOVA) between MechCar and competitor vehicles
 
 What is the null hypothesis or alternative hypothesis?
 
@@ -88,8 +85,18 @@ For comparing vehicle parameters (numeric)
 - Null Hypothesis: The slope of the linear model is zero, or m = 0
 - Alternative hypothesis: The slope of the linear model is zero, or m = 0
 
-For highly correlated vehicle parameters,
+For comparing highly correlated vehicle parameters between cars (MechCar and competitors)
+Two-way ANOVA
+- Null Hypothesis: 
+- Alternative hypothesis:
 
-- Perform 
 
+One-way ANOVA
+- Null Hypothesis: 
+- Alternative hypothesis:
 
+What statistical test would you use to test the hypothesis? And why?
+- Perform multiple linear regression analysis to determine parameters that correlate with fuel effiency
+- Perform Analysis of Varience (ONE-WAY ANOVA/ TWO-WAY ANOVA) between MechCar and competitor vehicles
+
+What data is needed to run the statistical test?
