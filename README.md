@@ -1,6 +1,7 @@
 # MechaCar_Statistical_Analysis
 
 # Overview
+A statistal analysis was performed on MechaCar vehicle data. 
 
 # Summary
 
