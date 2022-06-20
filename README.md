@@ -93,10 +93,12 @@ A statistical study design is proposed to predict vehicle performance (by fuel e
   - Correlation analysis before linear modeling will help identifying the vehicle parameters that correlate with fuel effiency (MPG) 
     - It may help narrow down the factors (independent variables) that can be used in the multiple linear modeling.
 
-- Perform ANOVA test to find vehicle parameters that influence mean of mpg between MechaCar vehicles and Competitor's vehicles
+- Perform ONE-WAY ANOVA test to find if fuel efficiency of MechaCar vehicles is statistically different from other competitor cars
   - This will facilitate identify which parameters need to be optimized to improve the performance (fuel efficiency) of MechCar vehicles. **Note:** This can be equally applicable to testing other vehcle performances such as cost, safety, carbon footprint etc.
-
+  - ONE-WAY ANOWA can be performed by using vehicle manufacturer (MechaCar vs Competitor) comparisons
+  
 - Using controlled experiment with competitor vehicle (preferably, one parameter at a time), A/B analysis can be performed to optimize the vehicle performance by using vehicle parameters identified in the ANOVA test.
+  - This can be performed if ONE-WAY ANOVA finds statistically differnt differences in fuel efficiencies between manufactures (MechaCar and competitors)
 
 *What metric or metrics are you going to test?*
 - Dependent variable: Fuel efficiency - City miles per gallon (MPG), highway MPG. These dependent variables needs testing one at a time.
@@ -110,9 +112,11 @@ For comparing measured vehicle parameters (numeric)
 
 For comparing highly correlated vehicle parameters (that predict MPG in the linear model) for statiscical significance of mean MPG between MechCar and competitor vehicles.
 
-ANOVA (one way ANOVA/ 2-way ANOVA)
-- Null Hypothesis: The means of all groups are equal. i.e., Mean performance (MPG) between MechaCar vehicles and competitor vehicles do not show statistical significance for tested vehicle parameters. 
-- Alternative hypothesis: At least one of the means is different from all other groups.i.e., PMean performance (MPG) between MechaCar vehicles and competitor vehicles show statistical significance for at least one of the tested vehicle parameters. 
+ONE-WAY ANOVA 
+
+Null Hypothesis: The means of all groups are equal. i.e., fuel efficiency (MPG) of MechaCar vehicles and competitor vehicles are not statistically significant. 
+
+- Alternative hypothesis: At least one of the means is different from all other groups.i.e., Mean fuel efficiency (MPG) is statistically significantly different at least in vehicle group (MechaCar and competitor vehicles) 
 
 *What statistical test would you use to test the hypothesis? And why?*
 - Perform correlation analysis using as many numerical parameters available in a publicly available dataset 
@@ -121,15 +125,16 @@ ANOVA (one way ANOVA/ 2-way ANOVA)
   
 - Perform multiple linear regression analysis using highly correlated variables (vehicle parameters) in the correlation analysis to determine parameters that predict fuel effiency (MPG).
   - This will enable identifying variables (measured vehicle parameters) that predict fuel efficiency (MPG). 
-- Perform Analysis of Varience (ONE-WAY ANOVA/ TWO-WAY ANOVA) on the variables identified in the multiple linear model to determine if there are significant difference of those vehicle parameters between MechCar and competitor vehicles
-  - Independant variables (vehicle parameters) need to be converted to categorical variables. This can be done by categorizing numeric data.
-  - This will facilitate determining if there are differences in vehicle performance between MechCar vehicles and compitor vehicles when used tested vehicle parameters. 
-  - These vehicle parameters can be tested futrther by using controlled experiments as in the next step below.
+  - 
+- Perform One-Way Analysis of Varience (ONE-WAY ANOVA) MechCar and competitor vehicles for fuel efficiency.
+  - Independant variables are vehicle groups.
+  - Dependent variable is fuel efficiency.
+  - This will enable identifying vehicle group which is statistically significant from others on fuel effiency.
  
-- Perform A/B analysis using competitor vehicle(s) as the control to optimize MechCar vehicle performance by using the identified vehicle paramers tin the previous ANOVA that influence statistically significant mean differences in the vehicle performance (fuel efficiency) between MechaCar vehicles and other competitor vehicles
-    - This step will help optimize vehicle parameters to outperform (or at least equalize) vehicle performance.
+- Perform A/B analysis using competitor vehicle(s) as the control to optimize MechCar vehicle performance by using the identified vehicle parameters that predict fuel efficiency in the linear model.
+    - This step will help optimize vehicle parameters to outperform (or at least equalize) MechaCar vehicle performance over the competitors..
 
 *What data is needed to run the statistical test?*
-- Any publicly available datasets for analysis. These data may need to clean up prior to the analysis. A numerical subset is needed for correlation analsis and multiple linear model and categorical data can be used for ANOVA. Independent variables with numerical data needs to be categorized for performingANOVA. 
+- Any publicly available datasets for analysis. These data may need to clean up prior to the analysis. A numerical subset is needed for correlation analsis and multiple linear model and categorical data can be used for ANOVA. 
 - If possible, new data collection will be ideal, however, it can be expensive. 
 - New data with other variables controlled (i.e., for A/B analysis) is better suited.
