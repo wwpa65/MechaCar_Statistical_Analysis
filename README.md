@@ -66,8 +66,24 @@ Figure 3. Summary statistics of Suspension Coil data.
 
 ## Study Design: MechaCar vs Competition
 
-Use availabe dataset to perform multiple linear regression to identify factors affecting the car mpg
-Perform correlation (Spearman) analysis to identify factors to consider
-Determine the final 
+
+
+*Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
+In your description, address the following questions:
+What metric or metrics are you going to test?
+What is the null hypothesis or alternative hypothesis?
+What statistical test would you use to test the hypothesis? And why?
+What data is needed to run the statistical test?*
+
+What metric or metrics are you going to test?
+- Fuel efficiency: City miles per gallon (MPG), highway MPG
+
+What is the null hypothesis or alternative hypothesis?
+- Null Hypothesis:
+- Alternative hypothesis:
+
+- Determine the factors to include in the statistical analysis.
+- Perform correlation analysis to determine the highly correlated factors that affect the performance of vehicles.
+- Collect data 
 
 
