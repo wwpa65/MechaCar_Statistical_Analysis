@@ -84,46 +84,52 @@ The t-test of all vehicles to population mean shows no statistical significance 
 
 *Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 
-We have seen in our current analysis that vehicle length, ground clearance, and the intercept of multiple linear model are the highly stastically significant variables (or measured vehicle parameters) that influences fuel efficiency (mpg) in MechaCar vehicles. The observation that the intercept is also highly stastically significant indicates that there may be other independent variables that needs to be included and/ or transform them for re-evaluating the model.
+We have seen in our current analysis that vehicle length, ground clearance, and the intercept of multiple linear model are the highly stastically significant variables (or measured vehicle parameters) that predict fuel efficiency (mpg) in MechaCar vehicles. The observation that the intercept is also highly stastically significant indicates that there may be other independent variables that needs to be included and/ or transform them for re-evaluating the model.
 
-The proposed study design to predict vehicle performance (by fuel efficiency, MPG) includes the following.
-- Extending the vehicle parameters to identify other additional (measured) vehicle parameters that affect fuel efficiency.
-  - This can be performed by using publicly available data with as many numerical parameters as possible for linear modeling.
-  - Correlation analysis before linear modeling may help for narrow down the list
+A statistical study design is proposed to predict vehicle performance (by fuel efficiency, MPG) and to evaluate performance between MechaCar and competitor vehicles includes the following.
 
-- Perform ANOVA test to find statistically significant vehicle parameters between MechaCar vehicles and Competitor's vehicles to identify which parameters need to be optimized to improve the performance of MechCar vehicles (in this example, fuel efficiency). **Note:** This can be equally applicable to testing other vehcle performances such as cost, safety, carbon footprint etc.
+- Linear Modeling of vehicle parameters to identify vehicle parameters that affect fuel efficiency (including MechaCar vehicles and vehicles of Other Competitors).
+  - This can be performed by using publicly available large data set with as many numerical vehicle parameters ((including MPG) as possible for linear         modeling.
+  - Correlation analysis before linear modeling will help identifying the vehicle parameters that correlate with fuel effiency (MPG) 
+    - It may help narrow down the factors (independent variables) that can be used in the multiple linear modeling.
+
+- Perform ANOVA test to find vehicle parameters that influence mean of mpg between MechaCar vehicles and Competitor's vehicles
+  - This will facilitate identify which parameters need to be optimized to improve the performance (fuel efficiency) of MechCar vehicles. **Note:** This can be equally applicable to testing other vehcle performances such as cost, safety, carbon footprint etc.
 
 - Using controlled experiment with competitor vehicle (preferably, one parameter at a time), A/B analysis can be performed to optimize the vehicle performance by using vehicle parameters identified in the ANOVA test.
 
 What metric or metrics are you going to test?
-- Fuel efficiency: City miles per gallon (MPG), highway MPG. These dependent variables needs testing one at a time.
-- number of forward gears, horsepower, torque, vehicle width, vehicle length, vehicle height, vehicle weight, spoiler angle, ground clearance
+- Dependent variable: Fuel efficiency - City miles per gallon (MPG), highway MPG. These dependent variables needs testing one at a time.
+- Independent variables: number of forward gears, horsepower, torque, vehicle width, vehicle length, vehicle height, vehicle weight, spoiler angle, ground clearance, and many others
 
 What is the null hypothesis or alternative hypothesis?
 
 For comparing measured vehicle parameters (numeric)
-- Null Hypothesis: The slope of the linear model is zero, or m = 0 (i.e., fuel efficiency is not correlated linearly with the factors (vehicle parameters) that are tested).
-- Alternative hypothesis: The slope of the linear model is not zero, or m = 0 ((i.e., fuel efficiency is correlated linearly with the factors (vehicle parameters) that are tested).
+- Null Hypothesis: The slope of the linear model is zero, or m = 0 (i.e., fuel efficiency is not linearly correlated with the factors (vehicle parameters) that are tested).
+- Alternative hypothesis: The slope of the linear model is not zero, or m = 0 ((i.e., fuel efficiency is linearly correlated with the factors (vehicle parameters) that are tested).
 
-For comparing highly correlated vehicle parameters with MPG between cars (MechCar and competitors)
+For comparing highly correlated vehicle parameters (that predict MPG in the linear model) for statiscical significance of mean MPG between MechCar and competitor vehicles.
 
 ANOVA (one way ANOVA/ 2-way ANOVA)
-- Null Hypothesis: The means of all groups are equal. i.e., Performance (MPG) of MechaCar vehicles and competitor vehicles do not show statistical significance for tested vehicle parameters. 
-- Alternative hypothesis: At least one of the means is different from all other groups.i.e., Performance (MPG) of MechaCar vehicles and competitor vehicles show statistical significance for at least one tested vehicle parameters. 
+- Null Hypothesis: The means of all groups are equal. i.e., Mean performance (MPG) between MechaCar vehicles and competitor vehicles do not show statistical significance for tested vehicle parameters. 
+- Alternative hypothesis: At least one of the means is different from all other groups.i.e., PMean performance (MPG) between MechaCar vehicles and competitor vehicles show statistical significance for at least one tested vehicle parameter. 
 
 What statistical test would you use to test the hypothesis? And why?
-- Perform correlation analysis using as many numerical parameters available in a available dataset 
-  - This will allow us to determine the measured vehicle parameters that correlates with fuel effiency (MPG).
+- Perform correlation analysis using as many numerical parameters available in a publicly available dataset 
   - This will help identifying correlating variables with fuel effiency (MPG) to narrow down the list of variables for multiple linear modeling. 
-  - Perform multiple linear regression analysis using highly correlated variables to determine parameters that have statistically significant impact on fuel effiency (MPG)
-  - This will enable identifying variables (measured vehicle parameters) for determining which variables predict vehicle performance. 
+  - It will also narrow down the list of independent variables for using in multiple linear modeling
+  
+- Perform multiple linear regression analysis using highly correlated variables (vehicle parameters) in the correlation analysis to determine parameters that predict fuel effiency (MPG).
+  - This will enable identifying variables (measured vehicle parameters) that predict fuel efficiency (MPG). 
 - Perform Analysis of Varience (ONE-WAY ANOVA/ TWO-WAY ANOVA) on the variables identified in the multiple linear model to determine if there are significant difference of those vehicle parameters between MechCar and competitor vehicles
-  - This will facilitate determining if there are differences in vehicle performance between MechCar vehicles and compitor vehicles when used tested vehicle parameters. 
-  - Then these parameters can be tested futrther by using controlled experiments as in the next step below. 
-- Perform A/B analysis using competitor vehicle(s) as the control to optimize MechCar vehicle performance by using the tested vehicle paramers that seem to have influence on the vehicle performance (fuel efficiency) between .
+  - Independant variables (vehicle parameters) need to be converted to categorical variables. This can be done by categorizing numeric data.
+  - his will facilitate determining if there are differences in vehicle performance between MechCar vehicles and compitor vehicles when used tested vehicle parameters. 
+  - These vehicle parameters can be tested futrther by using controlled experiments as in the next step below.
+ 
+- Perform A/B analysis using competitor vehicle(s) as the control to optimize MechCar vehicle performance by using the identified vehicle paramers tin the previous ANOVA that influence statistically significant mean differences in the vehicle performance (fuel efficiency) between MechaCar vehicles and other competitor vehicles
     - This step will help optimize vehicle parameters to outperform (or at least equalize) vehicle performance.
 
 What data is needed to run the statistical test?
-- Any publicly available datasets for analysis. These data may need to clean up prior to the analysis.
-- If possible, new data collection will be ideal. 
+- Any publicly available datasets for analysis. These data may need to clean up prior to the analysis. A numerical subset is needed for correlation analsis and multiple linear model and categorical data can be used for ANOVA. Independent variables with numerical data needs to be categorized for performingANOVA. 
+- If possible, new data collection will be ideal, however, it can be expensive. 
 - New data with other variables controlled (i.e., for A/B analysis) is better suited.
