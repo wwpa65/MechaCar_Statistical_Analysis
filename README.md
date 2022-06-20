@@ -69,11 +69,7 @@ Figure 3. Summary statistics of Suspension Coil data.
 
 *Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?*
+We have seen our current analysis that vehicle length, ground clearance, and the intercept of multiple linear model are highly stastically significant  for fuel efficiency. The observation that the intercept is also highly stastically significant indicates that there may be other variables that needs to be tested. The proposed study design includes a) Extending the vehicle parameters to identify other additional vehicle parameters that affect fuel efficiency, b)Perform ANOVA test to find statistically significant vehicle parameters between MechCar and Competitor's vehicles to identify which parameters need to be optimized to improve the performance of MechCar vehicles (in this example, fuel efficiency). This can be equally applicable to testing other vehcle performances such as cost, safety, carbon footprint etc..  
 
 What metric or metrics are you going to test?
 - Fuel efficiency: City miles per gallon (MPG), highway MPG
@@ -86,17 +82,16 @@ For comparing vehicle parameters (numeric)
 - Alternative hypothesis: The slope of the linear model is zero, or m = 0
 
 For comparing highly correlated vehicle parameters between cars (MechCar and competitors)
-Two-way ANOVA
-- Null Hypothesis: 
-- Alternative hypothesis:
-
-
 One-way ANOVA
-- Null Hypothesis: 
-- Alternative hypothesis:
+
+- Null Hypothesis: The means of all groups are equal.
+- Alternative hypothesis: At least one of the means is different from all other groups.
 
 What statistical test would you use to test the hypothesis? And why?
 - Perform multiple linear regression analysis to determine parameters that correlate with fuel effiency
 - Perform Analysis of Varience (ONE-WAY ANOVA/ TWO-WAY ANOVA) between MechCar and competitor vehicles
 
 What data is needed to run the statistical test?
+
+- Ideally new data with other variables controlled is better suited.
+- However, any available datasets with the data type needed for analysis is okay to use. 
