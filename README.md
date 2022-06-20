@@ -97,7 +97,7 @@ Note: In this description, I use the term "vehicle parameters" for the vehicle m
 
 - Perform ONE-WAY ANOVA test to find if fuel efficiency of MechaCar vehicles is statistically different from other competitor cars
   - One-Way Anova can be used even if there are more types within MechaCar and Competitor groups. 
-  - This will facilitate identify which parameters need to be optimized to improve the performance (fuel efficiency) of MechCar vehicles. **Note:** This can be equally applicable to testing other vehcle performances such as cost, safety, carbon footprint etc.
+  - This will facilitate identify which parameters need to be optimized to improve the performance (fuel efficiency) of MechaCar vehicles. **Note:** This can be equally applicable to testing other vehcle performances such as cost, safety, carbon footprint etc.
   - ONE-WAY ANOWA can be performed by using vehicle manufacturer (MechaCar vs Competitor) comparisons
   
 - Using controlled experiment with competitor vehicle (preferably, one parameter at a time), A/B analysis can be performed to optimize the vehicle performance by using vehicle parameters identified in the multiple linear regresson model.
@@ -129,12 +129,12 @@ Null Hypothesis: The means of all groups are equal. i.e., fuel efficiency (MPG) 
 - Perform multiple linear regression analysis using highly correlated variables (vehicle parameters) in the correlation analysis to determine parameters that predict fuel effiency (MPG).
   - This will enable identifying variables (measured vehicle parameters) that predict fuel efficiency (MPG). 
  
-- Perform One-Way Analysis of Varience (ONE-WAY ANOVA) MechCar and competitor vehicles for fuel efficiency.
+- Perform One-Way Analysis of Varience (ONE-WAY ANOVA) MechaCar and competitor vehicles for fuel efficiency.
   - Independant variables are vehicle groups.
   - Dependent variable is fuel efficiency.
   - This will enable identifying if there are statisticall significant differences in fuel efficiency based on vehicle groups.
  
-- Perform A/B analysis using competitor vehicle(s) as the control to optimize MechCar vehicle performance by using the identified vehicle parameters that predict fuel efficiency in the multiple linear regression model.
+- Perform A/B analysis using competitor vehicle(s) as the control to optimize MechaCar vehicle performance by using the identified vehicle parameters that predict fuel efficiency in the multiple linear regression model.
     - This step will help optimize vehicle parameters to outperform (or at least equalize) MechaCar vehicle performance over the competitors.
 
 *What data is needed to run the statistical test?*
