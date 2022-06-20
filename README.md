@@ -28,17 +28,17 @@ Vehicle length, ground clearance, and intercept of the model provided a non-rand
 
 
 *Is the slope of the linear model considered to be zero? Why or why not?*
-- The slope of the model is NOT considered to be zero because the linear model has a p-value of 5.35e-11 and R2 = 0.71. It rejects the null-hypothesis
+- The slope of the model is NOT considered to be zero because the multiple linear regression model has a p-value of 5.35e-11 and R2 = 0.71. It rejects the null-hypothesis
 
 *Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?*
-- This linear model seems to predict mpg of MechaCar prototypes effectively because R^2 = 0.71 while the p-value remained significant (p=5.35e-11). 
+- This multiple linear regression model seems to predict mpg of MechaCar prototypes effectively because R^2 = 0.71 while the p-value remained significant (p=5.35e-11). 
 - However, it needs further evaluation because its intercept is also statistically significant, meaning that there is a significant amount of variability when all independent variables are zero. 
   - Significant features may need scaling or transforming to improve predictive ability of the model.
   - There may be other variables that can help explain the variability of the dependent variable (mpg) that have not been included in our model ot the current independant variables may need transforming and model re-evaluation after that.  
 
 ![Linear_Regression](/images/lm-mpg_vehicle_param.png)
 
-**Figure 2.** Suummary of the linear regression model 
+**Figure 2.** Suummary of the multiple linear regression model 
 
 ## Summary Statistics on Suspension Coils
 
@@ -84,20 +84,21 @@ The t-test of all vehicles to population mean shows no statistical significance 
 
 *Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 
-We have seen in our current analysis that vehicle length, ground clearance, and the intercept of multiple linear model are the highly stastically significant variables (or measured vehicle parameters) that predict fuel efficiency (mpg) in MechaCar vehicles. The observation that the intercept is also highly stastically significant indicates that there may be other independent variables that needs to be included and/ or transform them for re-evaluating the model.
+We have seen in our current analysis that vehicle length, ground clearance, and the intercept of multiple linear regression model are the highly stastically significant variables (or measured vehicle parameters) that predict fuel efficiency (mpg) in MechaCar vehicles. The observation that the intercept is also highly stastically significant indicates that there may be other independent variables that needs to be included and/ or transform them for re-evaluating the model. The correlation coefficients of other independent variables also contributed to the multiple regression model.  
 
 A statistical study design is proposed to predict vehicle performance (by fuel efficiency, MPG) and to evaluate performance between MechaCar and competitor vehicles includes the following.
 
 - Linear Modeling of vehicle parameters to identify vehicle parameters that affect fuel efficiency (including MechaCar vehicles and vehicles of Other Competitors).
   - This can be performed by using publicly available large data set with as many numerical vehicle parameters ((including MPG) as possible for linear         modeling.
-  - Correlation analysis before linear modeling will help identifying the vehicle parameters that correlate with fuel effiency (MPG) 
-    - It may help narrow down the factors (independent variables) that can be used in the multiple linear modeling.
+  - Correlation analysis priot to linear modeling will help identifying the vehicle parameters that highly correlate with fuel effiency (MPG) 
+    - It may also help narrow down the factors (independent variables) that can be used in the multiple linear modeling.
 
 - Perform ONE-WAY ANOVA test to find if fuel efficiency of MechaCar vehicles is statistically different from other competitor cars
+  - One-Way Anova can be used even if there are more types within MechaCar and Competitor groups. 
   - This will facilitate identify which parameters need to be optimized to improve the performance (fuel efficiency) of MechCar vehicles. **Note:** This can be equally applicable to testing other vehcle performances such as cost, safety, carbon footprint etc.
   - ONE-WAY ANOWA can be performed by using vehicle manufacturer (MechaCar vs Competitor) comparisons
   
-- Using controlled experiment with competitor vehicle (preferably, one parameter at a time), A/B analysis can be performed to optimize the vehicle performance by using vehicle parameters identified in the ANOVA test.
+- Using controlled experiment with competitor vehicle (preferably, one parameter at a time), A/B analysis can be performed to optimize the vehicle performance by using vehicle parameters identified in the multiple linear regresson model.
   - This can be performed if ONE-WAY ANOVA finds statistically differnt differences in fuel efficiencies between manufactures (MechaCar and competitors)
 
 *What metric or metrics are you going to test?*
@@ -106,15 +107,15 @@ A statistical study design is proposed to predict vehicle performance (by fuel e
 
 *What is the null hypothesis or alternative hypothesis?*
 
-For comparing measured vehicle parameters (numeric)
+**For comparing measured vehicle parameters (numeric):**
 - Null Hypothesis: The slope of the linear model is zero, or m = 0 (i.e., fuel efficiency is not linearly correlated with the factors (vehicle parameters) that are tested).
 - Alternative hypothesis: The slope of the linear model is not zero, or m = 0 ((i.e., fuel efficiency is linearly correlated with the factors (vehicle parameters) that are tested).
 
-For comparing highly correlated vehicle parameters (that predict MPG in the linear model) for statiscical significance of mean MPG between MechCar and competitor vehicles.
+**For comparing vehicle groups:**
 
 ONE-WAY ANOVA 
 
-Null Hypothesis: The means of all groups are equal. i.e., fuel efficiency (MPG) of MechaCar vehicles and competitor vehicles are not statistically significant. 
+Null Hypothesis: The means of all groups are equal. i.e., fuel efficiency (MPG) of MechaCar vehicles and competitor vehicles are not statistically significantly different. 
 
 - Alternative hypothesis: At least one of the means is different from all other groups.i.e., Mean fuel efficiency (MPG) is statistically significantly different at least in vehicle group (MechaCar and competitor vehicles) 
 
@@ -129,10 +130,10 @@ Null Hypothesis: The means of all groups are equal. i.e., fuel efficiency (MPG) 
 - Perform One-Way Analysis of Varience (ONE-WAY ANOVA) MechCar and competitor vehicles for fuel efficiency.
   - Independant variables are vehicle groups.
   - Dependent variable is fuel efficiency.
-  - This will enable identifying vehicle group which is statistically significant from others on fuel effiency.
+  - This will enable identifying if there are statisticall significant differences in fuel efficiency based on vehicle groups.
  
-- Perform A/B analysis using competitor vehicle(s) as the control to optimize MechCar vehicle performance by using the identified vehicle parameters that predict fuel efficiency in the linear model.
-    - This step will help optimize vehicle parameters to outperform (or at least equalize) MechaCar vehicle performance over the competitors..
+- Perform A/B analysis using competitor vehicle(s) as the control to optimize MechCar vehicle performance by using the identified vehicle parameters that predict fuel efficiency in the multiple linear regression model.
+    - This step will help optimize vehicle parameters to outperform (or at least equalize) MechaCar vehicle performance over the competitors.
 
 *What data is needed to run the statistical test?*
 - Any publicly available datasets for analysis. These data may need to clean up prior to the analysis. A numerical subset is needed for correlation analsis and multiple linear model and categorical data can be used for ANOVA. 
