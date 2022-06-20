@@ -19,6 +19,7 @@ Suspension_Coil <- read.csv(file="Suspension_Coil.csv")
 lot <- group_by(Suspension_Coil, Manufacturing_Lot)
 
 total_summary <- summarize(lot, Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI))
+total_summary
 
 #DELIVERABLE 3
 # ttest for all to population mean of 1500
