@@ -3,9 +3,14 @@
 # Overview
 A statistal analysis was performed on MechaCar vehicle data. Multiple linear model was performed on the MechaCar dataset and t-tests were performed on Suspension coil dataset. The goal of the multiple linear model was to identify factors that influence fuel efficiency. The t-tests were used to identify differences of suspension coils between vehicle lot numbers. 
 
+Tools used:
+
+- R Project for Statistical Computing
+- Git
+
 # Summary
 
-A screenshot of data frame for MechaCar data is shown in Figure 1. 
+The Metachar dataset (CSV) was imported into R dataframe. A screenshot of data frame for MechaCar data is shown in Figure 1. 
 
 ![Mechar_Data](/images/MechaCar-data.png)
 
@@ -13,23 +18,23 @@ A screenshot of data frame for MechaCar data is shown in Figure 1.
 
 ## Linear Regression to Predict MPG
 
-*Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+*Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?*
 
-The summary results of the multiple linear regression model is shown in the Figure 2.
+Vehicle length, ground clearance, and intercept of the model provided a non-random amount of variance to the mpg values in the dataset. The summary results of the multiple linear regression model is shown in the Figure 2.
 
 - Intercept (p-value=5.08e-08)
 - vehicle_length (p-value=2.60e-12)
 - ground_clearance (p-value=5.21e-08)
 
 
-Is the slope of the linear model considered to be zero? Why or why not?
+*Is the slope of the linear model considered to be zero? Why or why not?*
 - The slope of the model is NOT considered to be zero because the linear model has a p-value of 5.35e-11 and R2 = 0.71. It rejects the null-hypothesis
 
-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-- this linear model seems to predict mpg effectively because R^2 = 0.71 while the p-value remained significant (p=5.35e-11). 
-- However, it needs further investigation because its intercept is also statistically significant, meaning that there is a significant amount of variability when all independent variables are zero. 
+*Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?*
+- This linear model seems to predict mpg of MechaCar prototypes effectively because R^2 = 0.71 while the p-value remained significant (p=5.35e-11). 
+- However, it needs further evaluation because its intercept is also statistically significant, meaning that there is a significant amount of variability when all independent variables are zero. 
   - Significant features may need scaling or transforming to improve predictive ability of the model.
-  - There may be other variables that can help explain the variability of our dependent variable that have not been included in our model ot the current independant variables may need transforming and model re-evaluation after that.  
+  - There may be other variables that can help explain the variability of the dependent variable (mpg) that have not been included in our model ot the current independant variables may need transforming and model re-evaluation after that.  
 
 ![Linear_Regression](/images/lm-mpg_vehicle_param.png)
 
@@ -37,7 +42,7 @@ Does this linear model predict mpg of MechaCar prototypes effectively? Why or wh
 
 ## Summary Statistics on Suspension Coils
 
-A screenshot of data frame for Suspension Coil data is shown in Figure 3. 
+The Suspension_Coil dataset (CSV) was imported into R dataframe. A screenshot of data frame for Suspension Coil data is shown in **Figure 3**. 
 
 ![SuspensionCoil_Data](/images/suspension-coil-data.png)
 
@@ -48,7 +53,7 @@ A screenshot of data frame for Suspension Coil data is shown in Figure 3.
 The suspension coil’s PSI continuous variable across all manufacturing lots
 The following PSI metrics for each lot: mean, median, variance, and standard deviation.*
 
-The population mean and median remain 1500 for lot 1 and lot2 while population mean and median for lot3 is 1496 and 1498, respectively. Summary statistics are shown in the Figure 4. However, the varience of lot3 seemes to be higher (170) when compared to lot 1 (0.98) and lot2 (7.47).
+The mean and median PSI is 1500 for lot 1 and lot2 while mean and median PSI for lot3 is 1496 and 1498, respectively. Summary statistics are shown in the Figure 4. In addition, the varience of lot3 seemes to be much higher (170) when compared to lot 1 (0.98) and lot2 (7.47).
 
 ![SuspensionCoil_Summary_Stat](/images/total-summary.png)
 
@@ -56,7 +61,7 @@ The population mean and median remain 1500 for lot 1 and lot2 while population m
 
 ## T-Tests on Suspension Coils
 
-The t-test of all vehicles to population mean shows no statistical significance (p=0.06, i.e. p > 0.05, Figure 5) meaning that it does not reject NULL hypothesis. In addition, t-test for lot1 (p=1, Figure 5)and lot2 (p=0.61, Figure 6) does not show statistical significance. However, t-test of lot3 vs population meanshows that it is statistically significant (p=0.04, Figure 7) meaning it rejects the NULL hypothesis. Therefore we can conclude that there is a difference in the production of lot3. 
+The t-test of all vehicles to population mean shows no statistical significance (p=0.06, i.e. p > 0.05, **Figure 5**) meaning that it does not reject NULL hypothesis. In addition, t-test for lot1 (p=1, Figure 5)and lot2 (p=0.61, **Figure 6**) does not show statistical significance. However, t-test of lot3 vs population mean shows that it is statistically significant (p=0.04, **Figure 7**) meaning it rejects the NULL hypothesis. Therefore we can conclude that there is a difference in the production of lot3. 
 
 ![All_vs_population_mean](/images/ttest-all-vs-popmean.png)
 
