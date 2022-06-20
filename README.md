@@ -111,8 +111,8 @@ For comparing measured vehicle parameters (numeric)
 For comparing highly correlated vehicle parameters (that predict MPG in the linear model) for statiscical significance of mean MPG between MechCar and competitor vehicles.
 
 ANOVA (one way ANOVA/ 2-way ANOVA)
-- Null Hypothesis: The means of all groups are equal. i.e., Mean performance (MPG) between MechaCar vehicles and competitor vehicles do not show statistical significance for tested vehicle parameters. 
-- Alternative hypothesis: At least one of the means is different from all other groups.i.e., PMean performance (MPG) between MechaCar vehicles and competitor vehicles show statistical significance for at least one tested vehicle parameter. 
+- Null Hypothesis: The means of all groups are equal. i.e., Mean performance (MPG) between MechaCar vehicles and competitor vehicles do not show statistical significance when using tested vehicle parameters. 
+- Alternative hypothesis: At least one of the means is different from all other groups.i.e., PMean performance (MPG) between MechaCar vehicles and competitor vehicles show statistical significance when using at least one of the tested vehicle parameters. 
 
 What statistical test would you use to test the hypothesis? And why?
 - Perform correlation analysis using as many numerical parameters available in a publicly available dataset 
