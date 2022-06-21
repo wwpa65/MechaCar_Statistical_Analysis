@@ -86,7 +86,7 @@ The t-test of all vehicles to population mean shows no statistical significance 
 
 We have seen in our current analysis that vehicle length, ground clearance, and the intercept of multiple linear regression model are the highly stastically significant variables (or measured vehicle parameters) that predict fuel efficiency (mpg) in MechaCar vehicles. The observation that the intercept is also highly stastically significant indicates that there may be other independent variables that needs to be included and/ or transform them for re-evaluating the model. The correlation coefficients of other independent variables also contributed to the multiple regression model.  
 
-A statistical study design is proposed to predict vehicle performance (by fuel efficiency, MPG) and to evaluate performance between MechaCar and competitor vehicles includes the following (as described briefly below). The statistical methods that are proposed include correlation analysis, multiple linear regression, ONE-WAY ANOWA, and A/B statistical test.
+A statistical study design is proposed to predict vehicle performance (by fuel efficiency, MPG) and to evaluate performance between MechaCar and competitor vehicles includes the following (as described briefly below). The statistical methods that are proposed include correlation analysis, multiple linear regression, ONE-WAY ANOWA, and A/B statistical test.A properly powered (with sufficient effect size) dataset is needed for the analysis. 
 
 Note: In this description, I use the term "vehicle parameters" for the vehicle measurements that are used for evaluations by companies.
 
@@ -141,3 +141,4 @@ ONE-WAY ANOVA
 - Any publicly available datasets for analysis. These data may need to clean up prior to the analysis. A numerical subset is needed for correlation analsis and multiple linear model and categorical data can be used for ANOVA. 
 - If possible, new data collection will be ideal, however, it can be expensive. 
 - New data with other variables controlled (i.e., for A/B analysis) is better suited.
+- A properly powered dataset (with sufficient effect size) is needed for the analysis.
